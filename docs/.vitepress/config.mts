@@ -1,14 +1,13 @@
-import {defineConfig} from 'vitepress'
-
+import { withMermaid } from "vitepress-plugin-mermaid";
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+
+export default withMermaid({
     base: '/leon',
     title: "Leon's Home",
     description: "A VitePress Site",
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            {text: '案例', link: '/markdown-examples'},
             {
                 text: "敏捷",
                 items: [
