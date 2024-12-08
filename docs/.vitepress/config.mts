@@ -172,7 +172,7 @@ export default withMermaid({
             ]
         },
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
+            {icon: 'github', link: 'https://github.com/lrliang'}
         ],
         footer: {
             copyright: "Copyright @ 2024 Leon"
