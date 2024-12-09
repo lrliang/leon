@@ -66,6 +66,18 @@ export default withMermaid({
                 ]
             },
             {
+                text: "代码画图",
+                items: [
+                    {
+                        text: "流程图",
+                        items: [
+                            {text: '基本元素', link: '/codechart/flowchart/1-基本元素.md'},
+                            {text: '内联方法-Inline Method', link: '/refactoring/2-inline-method.md'}
+                        ]
+                    }
+                ]
+            },
+            {
                 text: "算法",
                 items: [
                     {
