@@ -59,8 +59,16 @@ export default withMermaid({
                     {
                         text: "重构手法",
                         items: [
-                            {text: '提取方法-Extract Method', link: '/refactoring/1-extract-method.md'},
-                            {text: '内联方法-Inline Method', link: '/refactoring/2-inline-method.md'}
+                            {text: 'Extract Method', link: '/refactoring/1-extract-method.md'},
+                            {text: 'Inline Method', link: '/refactoring/2-inline-method.md'},
+                            {text: 'Rename', link: '/refactoring/3-rename.md'},
+                            {text: 'Move Method', link: '/refactoring/4-move-method.md'},
+                            {text: 'Introduce Parameter Object', link: '/refactoring/5-introduce-parameter-object.md'},
+                            {text: 'Decompose Conditional', link: '/refactoring/6-decompose-conditional.md'},
+                            {text: 'Replace Algorithm', link: '/refactoring/7-replace-algorithm.md'},
+                            {text: 'Extract Interface', link: '/refactoring/8-extract-interface.md'},
+                            {text: 'Remove Setter', link: '/refactoring/9-remove-setter.md'},
+                            {text: 'Consolidate Conditional Expression', link: '/refactoring/10-consolidate-conditional-expression.md'},
                         ]
                     }
                 ]
