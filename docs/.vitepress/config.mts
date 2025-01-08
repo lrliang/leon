@@ -80,8 +80,7 @@ export default withMermaid({
                     {
                         text: "流程图",
                         items: [
-                            {text: '基本元素', link: '/codechart/flowchart/1-基本元素.md'},
-                            {text: '内联方法-Inline Method', link: '/refactoring/2-inline-method.md'}
+                            {text: '基本元素', link: '/codechart/flowchart/1-基本元素.md'}
                         ]
                     }
                 ]
@@ -196,7 +195,7 @@ export default withMermaid({
                         {text: '提取接口 (Extract Interface)', link: '/refactoring/8-extract-interface.md'},
                         {text: '移除设置器 (Remove Setter)', link: '/refactoring/9-remove-setter.md'},
                         {text: '合并条件表达式 (Consolidate Conditional Expression)', link: '/refactoring/10-consolidate-conditional-expression.md'},
-                        {text: '替换魔术数字为符号常量', link: '/refactoring/11-replace-magic-number-with-symbolic-constant.md'},
+                        {text: '替换魔术数字为符号常量(Replace Magic Number with Symbolic Constant)', link: '/refactoring/11-replace-magic-number-with-symbolic-constant.md'},
                     ]
                 }
             ]
