@@ -69,6 +69,7 @@ export default withMermaid({
                             {text: '提取接口', link: '/refactoring/8-extract-interface.md'},
                             {text: '移除设置器', link: '/refactoring/9-remove-setter.md'},
                             {text: '合并条件表达式', link: '/refactoring/10-consolidate-conditional-expression.md'},
+                            {text: '替换魔术数字为符号常量', link: '/refactoring/11-replace-magic-number-with-symbolic-constant.md'},
                         ]
                     }
                 ]
@@ -195,6 +196,7 @@ export default withMermaid({
                         {text: '提取接口 (Extract Interface)', link: '/refactoring/8-extract-interface.md'},
                         {text: '移除设置器 (Remove Setter)', link: '/refactoring/9-remove-setter.md'},
                         {text: '合并条件表达式 (Consolidate Conditional Expression)', link: '/refactoring/10-consolidate-conditional-expression.md'},
+                        {text: '替换魔术数字为符号常量', link: '/refactoring/11-replace-magic-number-with-symbolic-constant.md'},
                     ]
                 }
             ]
