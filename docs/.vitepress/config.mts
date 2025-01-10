@@ -70,6 +70,10 @@ export default withMermaid({
                             {text: '移除设置器', link: '/refactoring/9-remove-setter.md'},
                             {text: '合并条件表达式', link: '/refactoring/10-consolidate-conditional-expression.md'},
                             {text: '替换魔术数字为符号常量', link: '/refactoring/11-replace-magic-number-with-symbolic-constant.md'},
+                            {text: '引入外派', link: '/refactoring/12-introduce-delegation.md'},
+                            {text: '提取超类', link: '/refactoring/13-extract-superclass.md'},
+                            {text: '内联临时变量', link: '/refactoring/14-inline-temp.md'},
+                            {text: '引入解释性变量', link: '/refactoring/15-introduce-explaining-variable.md'},
                         ]
                     }
                 ]
@@ -196,6 +200,10 @@ export default withMermaid({
                         {text: '移除设置器 (Remove Setter)', link: '/refactoring/9-remove-setter.md'},
                         {text: '合并条件表达式 (Consolidate Conditional Expression)', link: '/refactoring/10-consolidate-conditional-expression.md'},
                         {text: '替换魔术数字为符号常量(Replace Magic Number with Symbolic Constant)', link: '/refactoring/11-replace-magic-number-with-symbolic-constant.md'},
+                        {text: '引入外派 (Introduce Delegation)', link: '/refactoring/12-introduce-delegation.md'},
+                        {text: '提取超类 (Extract Superclass)', link: '/refactoring/13-extract-superclass.md'},
+                        {text: '内联临时变量 (Inline Temp)', link: '/refactoring/14-inline-temp.md'},
+                        {text: '引入解释性变量 (Introduce Explaining Variable)', link: '/refactoring/15-introduce-explaining-variable.md'},
                     ]
                 }
             ]
