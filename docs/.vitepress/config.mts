@@ -74,6 +74,11 @@ export default withMermaid({
                             {text: '提取超类', link: '/refactoring/13-extract-superclass.md'},
                             {text: '内联临时变量', link: '/refactoring/14-inline-temp.md'},
                             {text: '引入解释性变量', link: '/refactoring/15-introduce-explaining-variable.md'},
+                            {text: '封装字段', link: '/refactoring/16-encapsulate-field.md'},
+                            {text: '替换继承为委托', link: '/refactoring/17-replace-inheritance-with-delegation.md'},
+                            {text: '替换委托为继承', link: '/refactoring/18-replace-delegation-with-inheritance.md'},
+                            {text: '引入工厂方法', link: '/refactoring/19-introduce-factory-method.md'},
+                            {text: '以查询取代临时变量', link: '/refactoring/20-replace-temp-with-query.md'},
                         ]
                     }
                 ]
@@ -204,6 +209,11 @@ export default withMermaid({
                         {text: '提取超类 (Extract Superclass)', link: '/refactoring/13-extract-superclass.md'},
                         {text: '内联临时变量 (Inline Temp)', link: '/refactoring/14-inline-temp.md'},
                         {text: '引入解释性变量 (Introduce Explaining Variable)', link: '/refactoring/15-introduce-explaining-variable.md'},
+                        {text: '封装字段 (Encapsulate Field)', link: '/refactoring/16-encapsulate-field.md'},
+                        {text: '替换继承为委托 (Replace Inheritance with Delegation)', link: '/refactoring/17-replace-inheritance-with-delegation.md'},
+                        {text: '替换委托为继承 (Replace Delegation with Inheritance)', link: '/refactoring/18-replace-delegation-with-inheritance.md'},
+                        {text: '引入工厂方法 (Introduce Factory Method)', link: '/refactoring/19-introduce-factory-method.md'},
+                        {text: '以查询取代临时变量(Replace Temp with Query)', link: '/refactoring/20-replace-temp-with-query.md'},
                     ]
                 }
             ]

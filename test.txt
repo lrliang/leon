@@ -1,17 +1,30 @@
-
-封装字段 (Encapsulate Field)
-描述：将公有字段变为私有，并提供访问器（getter）和修改器（setter）。
-目的：控制对字段的访问，增强数据封装性。
-使用场景：当需要限制对字段的直接访问时。
-替换继承为委托 (Replace Inheritance with Delegation)
-描述：用委托关系替换继承关系，即让一个类持有另一个类的实例，并将调用转发给该实例。
-目的：减少类之间的耦合，提高代码的灵活性。
-使用场景：当继承关系过于复杂或不适合时。
-替换委托为继承 (Replace Delegation with Inheritance)
-描述：将委托关系转换为继承关系，即让一个类继承另一个类，并重写必要的方法。
-目的：简化代码结构，提高代码的可扩展性。
-使用场景：当委托关系导致代码过于复杂时。
-引入工厂方法 (Introduce Factory Method)
-描述：创建一个工厂方法来负责对象的创建，而不是直接使用构造函数。
-目的：提高代码的灵活性和可测试性，便于扩展和维护。
-使用场景：当对象的创建逻辑较为复杂或可能发生变化时。
+1. 提炼函数（Extract Function）
+2. 内联函数（Inline Function）
+3. 临时变量改名（Rename Temp Variable）
+4. 以函数对象取代函数（Replace Function with Command）
+5. 增添参数（Add Parameter）
+6. 移除参数（Remove Parameter）
+7. 分离查询与修改（Separate Query from Modifier）
+8. 隐藏委托关系（Hide Delegate）
+9. 移除中间人（Remove Middle Man）
+10. 引入外加函数（Introduce Foreign Method）
+11. 引入本地扩展（Introduce Local Extension）
+12. 封装集合（Encapsulate Collection）
+13. 以对象取代数据值（Replace Data Value with Object）
+14. 以类取代类型码（Replace Type Code with Class）
+15. 以子类取代类型码（Replace Type Code with Subclasses）
+16. 以状态 / 策略取代类型码（Replace Type Code with State/Strategy）
+17. 自封装字段（Self Encapsulate Field）
+18. 以明确函数取代参数（Replace Parameter with Explicit Methods）
+19. 保持对象完整（Preserve Whole Object）
+20. 以函数取代参数（Replace Parameter with Methods）
+21. 引入参数对象（Introduce Parameter Object）
+22. 移除设值函数（Remove Setting Method）
+23. 隐藏方法（Hide Method）
+24. 替换算法（Replace Algorithm）
+25. 搬移函数（Move Function）
+26. 搬移字段（Move Field）
+27. 提炼类（Extract Class）
+28. 内联类（Inline Class）
+29. 隐藏委托类（Hide Delegate Class）
+30. 移除死代码（Remove Dead Code）
