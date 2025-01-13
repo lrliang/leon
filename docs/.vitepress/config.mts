@@ -79,6 +79,8 @@ export default withMermaid({
                             {text: '替换委托为继承', link: '/refactoring/18-replace-delegation-with-inheritance.md'},
                             {text: '引入工厂方法', link: '/refactoring/19-introduce-factory-method.md'},
                             {text: '以查询取代临时变量', link: '/refactoring/20-replace-temp-with-query.md'},
+                            {text: '以函数对象取代函数', link: '/refactoring/21-replace-function-with-command.md'},
+                            {text: '自封装字段', link: '/refactoring/22-self-encapsulate-field.md'},
                         ]
                     }
                 ]
@@ -214,6 +216,8 @@ export default withMermaid({
                         {text: '替换委托为继承 (Replace Delegation with Inheritance)', link: '/refactoring/18-replace-delegation-with-inheritance.md'},
                         {text: '引入工厂方法 (Introduce Factory Method)', link: '/refactoring/19-introduce-factory-method.md'},
                         {text: '以查询取代临时变量(Replace Temp with Query)', link: '/refactoring/20-replace-temp-with-query.md'},
+                        {text: '以函数对象取代函数(Replace Function with Command)', link: '/refactoring/21-replace-function-with-command.md'},
+                        {text: '自封装字段(Self Encapsulate Field)', link: '/refactoring/22-self-encapsulate-field.md'},
                     ]
                 }
             ]
