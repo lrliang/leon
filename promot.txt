@@ -1,85 +1,35 @@
 ## 简介
+“提取方法”（Extract Method）是一种常用的重构技术，通过将一段代码提取到一个独立的方法中，可以提高代码的可读性和可维护性。这种方法特别适用于那些重复出现或逻辑复杂的代码块。以下是进行“提取方法”重构的详细步骤：
 
-“重命名”（Rename）是一种基础但极其重要的重构技术，它通过为变量、方法、类等元素选择更具描述性和准确性的名称来提高代码的可读性和维护性。一个恰当的名称可以立即传达出其用途和意图，使得代码更容易理解。以下是进行“重命名”重构的详细步骤。
+## 针对的症状（代码坏味道）
+- 过长的方法（Long Method）
+- 重复的代码（Duplicated Code）
+- 代码块内的逻辑过于复杂（Complex Logic in a Block）
 
-## 重命名（Rename）的详细步骤
-
-### 1. 识别需要重命名的元素
-- **寻找误导性名称**：检查代码中是否有名称不能准确反映其用途或行为的元素。
-- **查找缩写或非标准术语**：避免使用不常见的缩写或内部团队特有的术语，以确保代码对所有开发者都是清晰的。
-- **评估一致性**：确保同一概念在不同地方使用相同的名称，保持命名的一致性。
-- **考虑上下文**：有时名称在局部范围内是合适的，但在更大范围或整个项目中可能不够明确。
-
-### 2. 选择新的名称
-- **选择有意义的名称**：新名称应该能够清楚地表达其功能或作用，避免过于泛化或过于具体。
-- **遵循命名约定**：根据项目的编码规范和语言习惯选择名称格式（如驼峰命名法、下划线分隔等）。
-- **保持简洁**：名称应尽量简短，但不应牺牲其描述性。过长的名称可能会降低代码的可读性。
-- **使用动词命名方法**：对于方法名，优先使用动词或动词短语，以表明它们执行的操作。
-
-### 3. 执行重命名操作
-- **使用IDE工具**：大多数现代集成开发环境（IDE）都提供了自动化的重命名工具，可以安全地替换所有引用该元素的地方。
-- **手动重命名**：如果IDE不支持自动化重命名，或者你正在处理某些特殊情况（如文本文件中的字符串），则需要手动进行更改。务必仔细检查所有引用点，确保无遗漏。
-- **更新文档和注释**：如果项目中有相关的文档或注释，记得同步更新，以反映新的名称。
-
-### 4. 测试
-- **编译代码**：确保代码编译通过，没有任何语法错误。
-- **运行测试**：运行所有相关的单元测试，确保重构操作没有引入新的错误。
-- **手动测试**：如果有必要，进行手动测试以验证功能的正确性，特别是对于用户界面或外部接口的变化。
-
-### 5. 代码审查
-- **同行评审**：让同事或其他团队成员审查你的更改，确保代码质量和可维护性没有下降。
-- **文档更新**：如果项目有维护文档的习惯，记得更新相关文档，说明重命名的影响。
+## 提取方法（Extract Method）的详细步骤
+1. 识别需要提取的代码块
+   - 寻找重复代码：在代码中找到重复出现的代码块。
+   - 识别复杂逻辑：找到逻辑复杂且难以理解的代码块。
+   - 评估代码块的独立性：确保提取的代码块具有一定的独立性和完整性，可以作为一个独立的方法存在。
+2. 创建新的方法
+   - 选择有意义的方法名：为新的方法选择一个能够清晰描述其功能的名称。
+   - 提取代码块：将选定的代码块复制到新的方法中。
+   - 传递必要的参数：确保新的方法能够接收必要的参数，以完成其功能。
+   - 返回值：如果需要，确保新的方法能够返回必要的值。
+3. 替换原始代码
+   - 调用新方法：在原始代码中，用调用新方法的语句替换提取的代码块。
+   - 清理未使用的变量：删除不再需要的局部变量或临时变量。
+4. 测试
+   - 编译代码：确保代码编译通过，没有任何语法错误。
+   - 运行测试：运行所有相关的单元测试，确保重构操作没有引入新的错误。
+   - 手动测试：如果有必要，进行手动测试以验证功能的正确性。
+5. 代码审查
+   - 同行评审：让同事或其他团队成员审查你的更改，确保代码质量和可维护性没有下降。
+   - 文档更新：如果项目有维护文档的习惯，记得更新相关文档，说明提取方法的影响。
 
 ## 示例
-
-假设有一个名为 `calculateTotal` 的方法，其中包含了一些不太直观的变量名称。我们希望对其进行“重命名”的重构：
-
----java
-public class Order {
-    private double p;
-    private int q;
-    private double tr;
-    private double sc;
-
-    public double calculateTotal() {
-        double st = p * q;
-        double t = st * tr;
-        double ft = st + t;
-        if (q > 10) {
-            ft += sc;
-        }
-        return ft;
-    }
-}
----
-
-### 步骤如下：
-
-1. **识别需要重命名的元素**：
-   - 变量 `p`：表示商品单价，应更改为 `price`。
-   - 变量 `q`：表示购买数量，应更改为 `quantity`。
-   - 变量 `tr`：表示税率，应更改为 `taxRate`。
-   - 变量 `sc`：表示运费，应更改为 `shippingCost`。
-   - 变量 `st`：表示小计，应更改为 `subTotal`。
-   - 变量 `t`：表示税额，应更改为 `tax`。
-   - 变量 `ft`：表示最终总价，应更改为 `finalTotal`。
-
-2. **选择新的名称**：
-   - 根据上述分析，为每个变量选择了更加描述性的名称。
-
-3. **执行重命名操作**：
-   - 使用IDE的重命名工具，将所有出现的旧名称替换为新名称。
-
-4. **测试**：
-   - **编译代码**：确保代码编译通过，没有任何语法错误。
-   - **运行测试**：运行所有相关的单元测试，确保重构操作没有引入新的错误。
-
-5. **代码审查**：
-   - **同行评审**：让同事或其他团队成员审查你的更改，确保代码质量和可维护性没有下降。
-
-### 重构后的代码：
-
----java
+假设有一个方法 calculateTotal，其中包含一段复杂的计算逻辑，我们希望对其进行“提取方法”的重构：
+@@@java
 public class Order {
     private double price;
     private int quantity;
@@ -96,10 +46,257 @@ public class Order {
         return finalTotal;
     }
 }
----
+@@@
 
-按照案例结构来产出重构手法的教程,注意代码使用---包裹而不是```：以查询取代临时变量（Replace Temp with Query）
+## 步骤如下：
+1. 识别需要提取的代码块：
+   - 复杂的计算逻辑： `double subTotal = price * quantity; double tax = subTotal * taxRate; double finalTotal = subTotal + tax; if (quantity > 10) { finalTotal += shippingCost; }`
+2. 创建新的方法：
+   - 选择有意义的方法名，例如 calculateFinalTotal：
+   - 提取代码块并传递必要的参数：
+   @@@java
+   private double calculateFinalTotal(double price, int quantity, double taxRate, double shippingCost) {
+       double subTotal = price * quantity;
+       double tax = subTotal * taxRate;
+       double finalTotal = subTotal + tax;
+       if (quantity > 10) {
+           finalTotal += shippingCost;
+       }
+       return finalTotal;
+   }
+   @@@
+3. 替换原始代码：
+   - 在 calculateTotal 方法中，用调用新方法的语句替换提取的代码块：
+   @@@java
+   public class Order {
+       private double price;
+       private int quantity;
+       private double taxRate;
+       private double shippingCost;
 
-帮我将上述内容输出为markdown代码，注意不要处理我可以直接粘贴到markdown编辑器正确渲染
+       public double calculateTotal() {
+           return calculateFinalTotal(price, quantity, taxRate, shippingCost);
+       }
+
+       private double calculateFinalTotal(double price, int quantity, double taxRate, double shippingCost) {
+           double subTotal = price * quantity;
+           double tax = subTotal * taxRate;
+           double finalTotal = subTotal + tax;
+           if (quantity > 10) {
+               finalTotal += shippingCost;
+           }
+           return finalTotal;
+       }
+   }
+   @@@
+4. 测试:
+   - 编译代码：确保代码编译通过，没有任何语法错误。
+   - 运行测试：运行所有相关的单元测试，确保重构操作没有引入新的错误。
+5. 代码审查：
+   - 让同事审查代码，确保没有引入新的问题。
+
+
+## 练习
+### 基础练习题
+1. 过长方法的提取
+   - 给定以下 Java 代码，processUserInput方法过长且逻辑复杂。请将计算用户年龄的部分提取成一个独立的方法。
+      @@@java
+      public class UserProcessor {
+          private String birthYearInput;
+
+          public UserProcessor(String birthYearInput) {
+              this.birthYearInput = birthYearInput;
+          }
+
+          public void processUserInput() {
+              int age = calculateAge();
+              System.out.println("User's age is: " + age);
+              if (age >= 18) {
+                  System.out.println("User is an adult.");
+              } else {
+                  System.out.println("User is a minor.");
+              }
+          }
+
+          private int calculateAge() {
+              int currentYear = 2025;
+              int birthYear = Integer.parseInt(birthYearInput);
+              return currentYear - birthYear;
+          }
+      }
+      @@@
+2. 重复代码的提取
+   - 下面的 Java 代码中有两个方法calculateRectangleArea和calculateSquareArea，都包含计算面积的重复代码。请将计算面积的代码提取成一个独立的方法。
+   @@@java
+   public class ShapeCalculator {
+       public void calculateRectangleArea(int length, int width) {
+           int area = calculateArea(length, width);
+           System.out.println("Rectangle area is: " + area);
+       }
+
+       public void calculateSquareArea(int side) {
+           int area = calculateArea(side, side);
+           System.out.println("Square area is: " + area);
+       }
+
+       private int calculateArea(int dim1, int dim2) {
+           return dim1 * dim2;
+       }
+   }
+   @@@
+
+### 进阶练习题
+1. 复杂逻辑块提取与参数传递
+   - 在这段 Java 代码中，calculateShippingCost方法内的逻辑较为复杂。请将计算折扣后的运费逻辑提取成一个独立方法，并正确处理参数传递。
+   @@@java
+   public class OrderShipping {
+       private double baseShippingCost;
+       private int orderQuantity;
+       private double discountRate;
+
+       public OrderShipping(double baseShippingCost, int orderQuantity, double discountRate) {
+           this.baseShippingCost = baseShippingCost;
+           this.orderQuantity = orderQuantity;
+           this.discountRate = discountRate;
+       }
+
+       public double calculateShippingCost() {
+           return calculateDiscountedShippingCost(baseShippingCost, orderQuantity, discountRate);
+       }
+
+       private double calculateDiscountedShippingCost(double baseCost, int quantity, double rate) {
+           double discountAmount = baseCost * rate;
+           double discountedShippingCost = baseCost - discountAmount;
+           if (quantity > 5) {
+               discountedShippingCost -= 5;
+           }
+           return discountedShippingCost;
+       }
+   }
+   @@@
+2. 提取方法与返回值处理
+   - 给定以下 Java 代码，processData方法包含复杂逻辑。请将数据转换和计算结果的部分提取成一个独立方法，并确保返回值正确处理。
+   @@@java
+   import java.util.ArrayList;
+   import java.util.List;
+
+   public class DataProcessor {
+       public int processData(int[] dataArray) {
+           List<Integer> processedData = transformData(dataArray);
+           return calculateSum(processedData);
+       }
+
+       private List<Integer> transformData(int[] dataArray) {
+           List<Integer> processedData = new ArrayList<>();
+           for (int num : dataArray) {
+               num = num * 2;
+               if (num > 10) {
+                   num = num - 5;
+               }
+               processedData.add(num);
+           }
+           return processedData;
+       }
+
+       private int calculateSum(List<Integer> processedData) {
+           int sum = 0;
+           for (int num : processedData) {
+               sum += num;
+           }
+           return sum;
+       }
+   }
+   @@@
+
+### 综合拓展练习题
+1. 多模块提取与代码审查模拟
+   - 考虑一个简单的 Java 电商系统，有Product类、Cart类和Order类。Cart类中的calculateCartTotal方法和Order类中的calculateOrderTotal方法都有重复且复杂的计算总价逻辑，同时Cart类中的applyCartDiscount方法逻辑也较为复杂。
+   - 请对这些方法进行 “提取方法” 重构，将重复和复杂逻辑提取成独立方法。
+   - 假设你完成了重构，请模拟一份简单的代码审查报告，指出重构后的优点和可能存在的潜在问题。
+   @@@java
+   class Product {
+       private double price;
+
+       public Product(double price) {
+           this.price = price;
+       }
+
+       public double getPrice() {
+           return price;
+       }
+   }
+
+   class Cart {
+       private Product[] products;
+       private double discountRate;
+
+       public Cart(Product[] products, double discountRate) {
+           this.products = products;
+           this.discountRate = discountRate;
+       }
+
+       public double calculateCartTotal() {
+           double total = calculateSubtotal(products);
+           return applyDiscount(total, discountRate);
+       }
+
+       public void applyCartDiscount() {
+           if (products.length > 3) {
+               discountRate = adjustDiscountRate(discountRate, 0.05);
+           }
+           if (calculateCartTotal() > 100) {
+               discountRate = adjustDiscountRate(discountRate, 0.1);
+           }
+       }
+
+       private double calculateSubtotal(Product[] products) {
+           double total = 0;
+           for (Product product : products) {
+               total += product.getPrice();
+           }
+           return total;
+       }
+
+       private double applyDiscount(double total, double rate) {
+           double discountAmount = total * rate;
+           return total - discountAmount;
+       }
+
+       private double adjustDiscountRate(double rate, double increment) {
+           return rate + increment;
+       }
+   }
+
+   class Order {
+       private Product[] products;
+       private double shippingCost;
+
+       public Order(Product[] products, double shippingCost) {
+           this.products = products;
+           this.shippingCost = shippingCost;
+       }
+
+       public double calculateOrderTotal() {
+           double total = calculateSubtotal(products);
+           return total + shippingCost;
+       }
+
+       private double calculateSubtotal(Product[] products) {
+           double total = 0;
+           for (Product product : products) {
+               total += product.getPrice();
+           }
+           return total;
+       }
+   }
+   @@@
+
+根据用户输入的重构手法名称来生成教程，按照案例结构来产出重构手法的教程,注意代码使用@@@包裹而不是```
+
+
+
+帮我将上述内容输出为markdown代码，注意不要处理我可以直接粘贴到markdown编辑器正确渲染，注意代码使用@@@包裹而不是```
 
 能不能听句话，帮我将上述内容输出为markdown代码，注意不要处理我可以直接粘贴到markdown编辑器正确渲染，注意代码使用---包裹而不是```
+
+对上面的手法教程生成练习题，注意不要处理我可以直接粘贴到markdown编辑器正确渲染，注意代码使用@@@包裹而不是```
