@@ -54,35 +54,43 @@ export default withMermaid({
                 ]
             },
             {
-                text: "工程实践",
+                text: "工程实践-重构",
                 items: [
                     {
-                        text: "重构手法",
+                        text: "1.ChangeFunctionDeclaration-更改函数声明",
                         items: [
-                            {text: '提取方法', link: '/refactoring/1-extract-method.md'},
-                            {text: '内联方法', link: '/refactoring/2-inline-method.md'},
-                            {text: '重命名', link: '/refactoring/3-rename.md'},
-                            {text: '移动方法', link: '/refactoring/4-move-method.md'},
-                            {text: '引入参数对象', link: '/refactoring/5-introduce-parameter-object.md'},
-                            {text: '拆分条件表达式', link: '/refactoring/6-decompose-conditional.md'},
-                            {text: '替换算法', link: '/refactoring/7-replace-algorithm.md'},
-                            {text: '提取接口', link: '/refactoring/8-extract-interface.md'},
-                            {text: '移除设置器', link: '/refactoring/9-remove-setter.md'},
-                            {text: '合并条件表达式', link: '/refactoring/10-consolidate-conditional-expression.md'},
-                            {text: '替换魔术数字为符号常量', link: '/refactoring/11-replace-magic-number-with-symbolic-constant.md'},
-                            {text: '引入外派', link: '/refactoring/12-introduce-delegation.md'},
-                            {text: '提取超类', link: '/refactoring/13-extract-superclass.md'},
-                            {text: '内联临时变量', link: '/refactoring/14-inline-temp.md'},
-                            {text: '引入解释性变量', link: '/refactoring/15-introduce-explaining-variable.md'},
-                            {text: '封装字段', link: '/refactoring/16-encapsulate-field.md'},
-                            {text: '替换继承为委托', link: '/refactoring/17-replace-inheritance-with-delegation.md'},
-                            {text: '替换委托为继承', link: '/refactoring/18-replace-delegation-with-inheritance.md'},
-                            {text: '引入工厂方法', link: '/refactoring/19-introduce-factory-method.md'},
-                            {text: '以查询取代临时变量', link: '/refactoring/20-replace-temp-with-query.md'},
-                            {text: '以函数对象取代函数', link: '/refactoring/21-replace-function-with-command.md'},
-                            {text: '自封装字段', link: '/refactoring/22-self-encapsulate-field.md'},
+                            {text: 'Add Parameter - 添加参数.md', link: '/refactoring/1.ChangeFunctionDeclaration-更改函数声明/1.Add Parameter - 添加参数.md'},
+                            {text: 'Change Signature - 更改签名.md', link: '/refactoring/1.ChangeFunctionDeclaration-更改函数声明/2. Change Signature - 更改签名.md'},
+                            {text: 'Remove Parameter - 删除参数.md', link: '/refactoring/1.ChangeFunctionDeclaration-更改函数声明/3. Remove Parameter - 删除参数.md'},
+                            {text: 'Rename Function - 重命名函数.md', link: '/refactoring/1.ChangeFunctionDeclaration-更改函数声明/4. Rename Function - 重命名函数.md'},
+                            {text: 'Rename Method - 重命名方法.md', link: '/refactoring/1.ChangeFunctionDeclaration-更改函数声明/5. Rename Method - 重命名方法.md'},
+                        ]
+                    },
+                    {
+                        text: "2.ChangeReferenceToValue-将引用更改为值",
+                        items: [
+                            {text: 'Change Reference to Value - 将引用更改为值.md', link: '/refactoring/2.ChangeReferenceToValue-将引用更改为值/1.Change Reference to Value - 将引用更改为值.md'},
+                            {text: 'Change Value to Reference - 将值更改为引用.md', link: '/refactoring/2.ChangeReferenceToValue-将引用更改为值/2.Change Value to Reference - 将值更改为引用.md'},
+                        ]
+                    },
+                    {
+                        text: "3.Collapse Hierarchy-合并层次结构",
+                        items: [
+                            {text: 'Collapse Hierarchy - 合并层次结构.md', link: '/refactoring/3.Collapse Hierarchy-合并层次结构/1.Collapse Hierarchy - 合并层次结构.md'},
+                            {text: 'Combine Functions into Class - 将函数合并到类中.md', link: '/refactoring/3.Collapse Hierarchy-合并层次结构/2.Combine Functions into Class - 将函数合并到类中.md'},
+                            {text: 'Combine Functions into Transform - 将函数合并到转换中.md', link: '/refactoring/3.Collapse Hierarchy-合并层次结构/3.Combine Functions into Transform - 将函数合并到转换中.md'},
+                        ]
+                    },
+                    {
+                        text: "4.Consolidate Conditional Expression - 合并条件表达式",
+                        items: [
+                            {text: 'Consolidate Conditional Expression - 合并条件表达式.md', link: '/refactoring/4.Consolidate Conditional Expression - 合并条件表达式/1. Consolidate Conditional Expression - 合并条件表达式.md'},
+                            {text: 'Decompose Conditional - 分解条件.md', link: '/refactoring/4.Consolidate Conditional Expression - 合并条件表达式/2. Decompose Conditional - 分解条件.md'},
                         ]
                     }
+
+
+
                 ]
             },
             {
