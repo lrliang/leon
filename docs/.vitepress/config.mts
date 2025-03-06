@@ -15,28 +15,24 @@ export default withMermaid({
                         text: "需求",
                         items: [
                             {text: 'TBD', link: '/'},
-                            {text: 'TBD', link: '/'}
                         ]
                     },
                     {
                         text: "开发",
                         items: [
                             {text: 'TBD', link: '/'},
-                            {text: 'TBD', link: '/'}
                         ]
                     },
                     {
                         text: "测试",
                         items: [
                             {text: 'TBD', link: '/'},
-                            {text: 'TBD', link: '/'}
                         ]
                     },
                     {
                         text: "发布",
                         items: [
                             {text: 'TBD', link: '/'},
-                            {text: 'TBD', link: '/'}
                         ]
                     }
                 ]
@@ -48,7 +44,6 @@ export default withMermaid({
                         text: "TBD",
                         items: [
                             {text: 'TBD', link: '/'},
-                            {text: 'TBD', link: '/'}
                         ]
                     }
                 ]
@@ -186,15 +181,15 @@ export default withMermaid({
                     {
                         text: "16.Replace Command with Function - 用函数替换命令",
                         items: [
-                            {text: 'eplace Command with Function - 用函数替换命令.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/1.Replace Command with Function - 用函数替换命令.md'},
-                            {text: 'eplace Parameter with Explicit Methods - 用显式方法替换参数.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/2.Replace Parameter with Explicit Methods - 用显式方法替换参数.md'},
-                            {text: 'eplace Constructor with Factory Method - 用工厂方法替换构造函数.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/3.Replace Constructor with Factory Method - 用工厂方法替换构造函数.md'},
-                            {text: 'eplace Control Flag with Break - 用break替换控制标志.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/4.Replace Control Flag with Break - 用break替换控制标志.md'},
-                            {text: 'eplace Subclass with Fields - 用字段替换子类.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/5.Replace Subclass with Fields - 用字段替换子类.md'},
-                            {text: 'eplace Duplicate Code with Function - 用函数替换重复代码.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/6.Replace Duplicate Code with Function - 用函数替换重复代码.md'},
-                            {text: 'eplace Derived Variable with Query - 用查询替换派生变量.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/7.Replace Derived Variable with Query - 用查询替换派生变量.md'},
-                            {text: 'eplace Error Code with Exception - 用异常替换错误代码.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/8.Replace Error Code with Exception - 用异常替换错误代码.md'},
-                            {text: 'eplace Exception with Pre-check - 用预检查替换异常.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/9.Replace Exception with Pre-check - 用预检查替换异常.md'},
+                            {text: 'Replace Command with Function - 用函数替换命令.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/1.Replace Command with Function - 用函数替换命令.md'},
+                            {text: 'Replace Parameter with Explicit Methods - 用显式方法替换参数.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/2.Replace Parameter with Explicit Methods - 用显式方法替换参数.md'},
+                            {text: 'Replace Constructor with Factory Method - 用工厂方法替换构造函数.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/3.Replace Constructor with Factory Method - 用工厂方法替换构造函数.md'},
+                            {text: 'Replace Control Flag with Break - 用break替换控制标志.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/4.Replace Control Flag with Break - 用break替换控制标志.md'},
+                            {text: 'Replace Subclass with Fields - 用字段替换子类.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/5.Replace Subclass with Fields - 用字段替换子类.md'},
+                            {text: 'Replace Duplicate Code with Function - 用函数替换重复代码.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/6.Replace Duplicate Code with Function - 用函数替换重复代码.md'},
+                            {text: 'Replace Derived Variable with Query - 用查询替换派生变量.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/7.Replace Derived Variable with Query - 用查询替换派生变量.md'},
+                            {text: 'Replace Error Code with Exception - 用异常替换错误代码.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/8.Replace Error Code with Exception - 用异常替换错误代码.md'},
+                            {text: 'Replace Exception with Pre-check - 用预检查替换异常.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/9.Replace Exception with Pre-check - 用预检查替换异常.md'},
                             {text: 'Replace Exception with Test - 用测试替换异常.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/10.Replace Exception with Test - 用测试替换异常.md'},
                             {text: 'Replace Function with Command - 用命令替换函数.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/11.Replace Function with Command - 用命令替换函数.md'},
                             {text: 'Replace Method with Method Object - 用方法对象替换方法.md', link: '/refactoring/16.Replace Command with Function - 用函数替换命令/12.Replace Method with Method Object - 用方法对象替换方法.md'},
@@ -286,9 +281,9 @@ export default withMermaid({
                     {
                         text: "背英语",
                         items: [
-                            {text: 'Day1', link: '/'},
-                            {text: 'Day2', link: '/'},
-                            {text: 'Day3', link: '/'}
+                            {text: 'Week1', link: '/'},
+                            {text: 'Week2', link: '/'},
+                            {text: 'Week3', link: '/'}
                         ]
                     }
                 ]
@@ -311,29 +306,25 @@ export default withMermaid({
                     {
                         text: "职业经历",
                         items: [
-                            {text: '111', link: '/'},
-                            {text: '222', link: '/'}
+                            {text: 'TBD', link: '/'},
                         ]
                     },
                     {
                         text: "学习经历",
                         items: [
-                            {text: '111', link: '/'},
-                            {text: '222', link: '/'}
+                            {text: 'TBD', link: '/'},
                         ]
                     },
                     {
                         text: "旅行",
                         items: [
-                            {text: '111', link: '/'},
-                            {text: '222', link: '/'}
+                            {text: 'TBD', link: '/'},
                         ]
                     },
                     {
                         text: "生活",
                         items: [
-                            {text: '111', link: '/'},
-                            {text: '222', link: '/'}
+                            {text: 'TBD', link: '/'},
                         ]
                     }
                 ]
