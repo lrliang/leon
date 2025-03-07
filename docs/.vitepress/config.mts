@@ -168,7 +168,7 @@ export default withMermaid({
                             {text: 'Remove Middle Man - 删除中间人.md', link: '/refactoring/14.Remove Middle Man - 删除中间人/1.Remove Middle Man - 删除中间人.md'},
                             {text: 'Remove Setting Method - 删除设置方法.md', link: '/refactoring/14.Remove Middle Man - 删除中间人/2.Remove Setting Method - 删除设置方法.md'},
                             {text: 'Remove Subclass - 删除子类.md', link: '/refactoring/14.Remove Middle Man - 删除中间人/3.Remove Subclass - 删除子类.md'},
-                            {text: 'Remove Control Flag - 删除控制标志.md', link: '/refactoring/14.Remove Middle Man - 删除中间人/5.Remove Control Flag - 删除控制标志.md'},
+                            {text: 'Remove Control Flag - 删除控制标志.md', link: '/refactoring/14.Remove Middle Man - 删除中间人/4.Remove Control Flag - 删除控制标志.md'},
                         ]
                     },
                     {
@@ -464,7 +464,7 @@ export default withMermaid({
                         {text: 'Remove Middle Man - 删除中间人.md', link: '/refactoring/14.Remove Middle Man - 删除中间人/1.Remove Middle Man - 删除中间人.md'},
                         {text: 'Remove Setting Method - 删除设置方法.md', link: '/refactoring/14.Remove Middle Man - 删除中间人/2.Remove Setting Method - 删除设置方法.md'},
                         {text: 'Remove Subclass - 删除子类.md', link: '/refactoring/14.Remove Middle Man - 删除中间人/3.Remove Subclass - 删除子类.md'},
-                        {text: 'Remove Control Flag - 删除控制标志.md', link: '/refactoring/14.Remove Middle Man - 删除中间人/5.Remove Control Flag - 删除控制标志.md'},
+                        {text: 'Remove Control Flag - 删除控制标志.md', link: '/refactoring/14.Remove Middle Man - 删除中间人/4.Remove Control Flag - 删除控制标志.md'},
                     ]
                 },
                 {
